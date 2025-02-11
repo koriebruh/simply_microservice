@@ -1,7 +1,6 @@
 package dto
 
 type Product struct {
-	Id           int64 `json:"id"`
-	Quantity     int64 `json:"quantity"`
-	PricePerItem int64 `json:"price_per_item"`
+	ProductId int64 `json:"product_id" validate:"required,gt=0"`
+	Quantity  int64 `json:"quantity" validate:"required,gt=0"`
 }

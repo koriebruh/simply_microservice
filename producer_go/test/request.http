@@ -1,0 +1,21 @@
+### Create new Order request
+POST http://localhost:3000/api/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "customer_id": 71,
+  "items": [
+    {"product_id": 8, "quantity": 11},
+    {"product_id": 2, "quantity": 3}
+  ],
+  "shipping_addr": "Jln Baru Jadi",
+  "payment_method": "bank_transfer",
+  "amount": 1000000
+}
+
+
+
+###
+GET http://localhost:3000/
+
