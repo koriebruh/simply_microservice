@@ -4,10 +4,13 @@ import (
 	"fmt"
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
+	"github.com/koriebruh/simply_microservice/cfg"
+	"github.com/koriebruh/simply_microservice/delivery"
 	"github.com/koriebruh/simply_microservice/dto"
 	"github.com/koriebruh/simply_microservice/entity"
 	"github.com/koriebruh/simply_microservice/utils"
 	"gorm.io/gorm"
+	"log"
 	"net/http"
 )
 
@@ -68,6 +71,11 @@ func (c OrderControllerImpl) CreateOrderController(ctx *fiber.Ctx) error {
 	}
 
 	// DI SINI NANTI BIKIN func  KAFKA SEND TOPIC order_request
+	cfg.GetConfig()
+	newOrder.Items = items
+	if err := delivery.OrderKafkaProducer(cfg.GetConfig(), "order_created", newOrder); err != nil {
+		log.Println("failed publish message")
+	}
 
 	// RETURN SUCCESS RESPONSE
 	return utils.WebResponse(ctx, http.StatusCreated, nil, "create order success", nil)

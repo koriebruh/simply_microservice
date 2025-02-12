@@ -6,6 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/koriebruh/simply_microservice/cfg"
 	"github.com/koriebruh/simply_microservice/controller"
+	"github.com/koriebruh/simply_microservice/delivery"
 	"log"
 )
 
@@ -22,6 +23,9 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World!")
 	})
+
+	go delivery.PaymentKafkaConsumer(config, "payment_status", pool)
+	go delivery.ShippingKafkaConsumer(config, "shipping_status", pool)
 
 	if err := app.Listen(fmt.Sprintf(":" + config.Server.Port)); err != nil {
 		log.Fatal("Server Terminated")
