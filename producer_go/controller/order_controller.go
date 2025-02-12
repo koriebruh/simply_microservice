@@ -78,15 +78,33 @@ func (c OrderControllerImpl) StatusOrderController(ctx *fiber.Ctx) error {
 	//GET REQUEST BODY
 	params := ctx.Params("id")
 	var orderStatus entity.Order
-	if err := c.DB.WithContext(ctx.Context()).Preload("Items").Where(params).Order(&orderStatus).Error; err != nil {
-		return err
+	if err := c.DB.WithContext(ctx.Context()).Where("id = ?", params).Preload("Items").First(&orderStatus).Error; err != nil {
+		if err == gorm.ErrRecordNotFound {
+			return utils.WebResponse(ctx, http.StatusNotFound, err, "error data not found", nil)
+		}
+		return utils.WebResponse(ctx, http.StatusInternalServerError, err, "got error", nil)
+	}
+
+	fmt.Printf("paramSend %v | data:%v", params, orderStatus)
+
+	//MAPPING DATA
+	var items []dto.Product
+	for _, i := range orderStatus.Items {
+		items = append(items, dto.Product{
+			ProductId: int64(i.ProductID),
+			Quantity:  i.Quantity,
+		})
+	}
+
+	result := dto.OrderStatusResponse{
+		Items:          items,
+		Amount:         orderStatus.Amount,
+		PaymentMethod:  string(orderStatus.PaymentMethod),
+		ShippingAddr:   orderStatus.ShippingAddr,
+		ShippingStatus: string(orderStatus.ShippingStatus),
 	}
 
 	//MAPPING, Ini asal dulu
-	return ctx.Status(http.StatusOK).JSON(dto.WebResponse{
-		Status:  "success",
-		Message: "create order success",
-		Data:    orderStatus,
-	})
+	return utils.WebResponse(ctx, http.StatusOK, nil, "get order status success", result)
 
 }

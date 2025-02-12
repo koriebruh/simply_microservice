@@ -32,5 +32,5 @@ SELECT DISTINCT *
 FROM orders o
          JOIN product_orders po ON o.id = po.order_id -- Menggunakan `order_id` di `product_orders`
          JOIN products p ON po.product_id = p.id -- Menghubungkan `product_orders` dengan `products`
-WHERE o.id = 2; -- Filter untuk memilih order dengan ID 1
+WHERE o.id = 71; -- Filter untuk memilih order dengan ID 1
 

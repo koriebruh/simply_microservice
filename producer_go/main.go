@@ -18,7 +18,7 @@ func main() {
 	orderController := controller.NewOrderControllerImpl(pool, validate)
 
 	app.Post("/api/orders", orderController.CreateOrderController)
-	app.Get("/api/orders/status:id", orderController.StatusOrderController)
+	app.Get("/api/orders/status/:id", orderController.StatusOrderController) // ini id order ygy
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World!")
 	})
@@ -27,3 +27,5 @@ func main() {
 		log.Fatal("Server Terminated")
 	}
 }
+
+//NOTE REFACTOR NANTI PERBAIKI  RESPONSE NYA DAN JNAGAN LUPA YG CREATE SETING AMOUNT NYA
