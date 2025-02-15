@@ -1,0 +1,81 @@
+cargo:rerun-if-env-changed=LIBZ_SYS_STATIC
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=zng/cmake.rs
+cargo:rerun-if-changed=zng/cc.rs
+note, vcpkg did not find zlib: Could not find Vcpkg tree: No vcpkg installation found. Set the VCPKG_ROOT environment variable or run 'vcpkg integrate install'
+OPT_LEVEL = Some(0)
+TARGET = Some(x86_64-pc-windows-msvc)
+cargo:rerun-if-env-changed=VCINSTALLDIR
+VCINSTALLDIR = None
+cargo:rerun-if-env-changed=VSTEL_MSBuildProjectFullPath
+VSTEL_MSBuildProjectFullPath = None
+cargo:rerun-if-env-changed=VSCMD_ARG_VCVARS_SPECTRE
+VSCMD_ARG_VCVARS_SPECTRE = None
+cargo:rerun-if-env-changed=WindowsSdkDir
+WindowsSdkDir = None
+cargo:rerun-if-env-changed=WindowsSDKVersion
+WindowsSDKVersion = None
+cargo:rerun-if-env-changed=LIB
+LIB = None
+PATH = Some(E:\Development\RUST_DEV\simple-microservice\rust_payment_service\target\debug\deps;E:\Development\RUST_DEV\simple-microservice\rust_payment_service\target\debug;C:\Users\ACER NITRO\.rustup\toolchains\nightly-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\tools\ruby33\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\xampp\php;C:\composer;C:\Program Files\Java\jdk-22\bin;C:\Program Files\Git\cmd;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Android\Android Studio\bin;C:\tools\dart-sdk\bin;C:\MinGW\bin;C:\ProgramData\mingw64\mingw64\bin;C:\Program Files\Memurai\;C:\tools\flutter\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.9\bin;C:\Program Files\PostgreSQL\16\bin;C:\tools\kafka_2.13-3.9.0\bin\windows;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\lib\gradle\tools\gradle-8.11.1\bin;C:\php-8.4.1-nts-Win32-vs17-x64 (1);C:\tools\php83;C:\ProgramData\chocolatey\lib\php;C:\Program Files\nodejs\node_modules\npm\bin;C:\Users\ACER NITRO\AppData\Roaming\npm;C:\Users\ACER NITRO\AppData\Roaming\npm\node_modules\k6;C:\Program Files\k6\;C:\Users\ACER NITRO\.gradle;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\tools\ruby33\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\xampp\php;C:\composer;C:\Program Files\Java\jdk-22\bin;C:\Program Files\Git\cmd;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Android\Android Studio\bin;C:\tools\dart-sdk\bin;C:\MinGW\bin;C:\ProgramData\mingw64\mingw64\bin;C:\Program Files\Memurai\;C:\tools\flutter\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.9\bin;C:\Program Files\PostgreSQL\16\bin;C:\tools\kafka_2.13-3.9.0\bin\windows;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\lib\gradle\tools\gradle-8.11.1\bin;C:\php-8.4.1-nts-Win32-vs17-x64 (1);C:\tools\php83;C:\ProgramData\chocolatey\lib\php;C:\Program Files\nodejs\node_modules\npm\bin;C:\Users\ACER NITRO\AppData\Roaming\npm;C:\Users\ACER NITRO\AppData\Roaming\npm\node_modules\k6;C:\Program Files\k6\;C:\Users\ACER NITRO\.gradle;C:\Users\ACER NITRO\.cargo\bin;E:\SEMESTER 3\anaconda3;E:\SEMESTER 3\anaconda3\Library\mingw-w64\bin;E:\SEMESTER 3\anaconda3\Library\usr\bin;E:\SEMESTER 3\anaconda3\Library\bin;E:\SEMESTER 3\anaconda3\Scripts;E:\dat apk;E:\dat apk\Library\mingw-w64\bin;E:\dat apk\Library\usr\bin;E:\dat apk\Library\bin;E:\dat apk\Scripts;C:\Users\ACER NITRO\AppData\Local\Microsoft\WindowsApps;C:\Users\ACER NITRO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ACER NITRO\AppData\Roaming\Composer\vendor\bin;C:\Users\ACER NITRO\AppData\Local\spicetify;C:\Users\ACER NITRO\AppData\Roaming\Python\Python311\Scripts;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.2\bin;C:\Program Files\JetBrains\RustRover 2024.1.3\bin;C:\Users\ACER NITRO\go\bin;C:\Program Files\JetBrains\GoLand 2024.2\bin;C:\Program Files\JetBrains\DataGrip 2024.2.2\bin;C:\Users\ACER NITRO\AppData\Local\Pub\Cache\bin;C:\tools\msys64;C:\Users\ACER NITRO\.bun\bin;C:\Program Files\JetBrains\PhpStorm 2024.3.2.1\bin;;C:\Users\ACER NITRO\AppData\Local\Microsoft\WindowsApps;)
+cargo:rerun-if-env-changed=INCLUDE
+INCLUDE = None
+HOST = Some(x86_64-pc-windows-msvc)
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some(cmpxchg16b,fxsr,lahfsahf,sse,sse2,sse3,x87)
+DEBUG = Some(true)
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+adler32.c
+compress.c
+crc32.c
+deflate.c
+infback.c
+inffast.c
+inflate.c
+inftrees.c
+trees.c
+uncompr.c
+zutil.c
+gzclose.c
+gzlib.c
+gzread.c
+gzwrite.c
+cargo:rerun-if-env-changed=AR_x86_64-pc-windows-msvc
+AR_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=AR_x86_64_pc_windows_msvc
+AR_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-pc-windows-msvc
+ARFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_pc_windows_msvc
+ARFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rustc-link-lib=static=z
+cargo:rustc-link-search=native=E:\Development\RUST_DEV\simple-microservice\rust_payment_service\target\debug\build\libz-sys-fa54a3c794f9e582\out\lib
+cargo:root=E:\Development\RUST_DEV\simple-microservice\rust_payment_service\target\debug\build\libz-sys-fa54a3c794f9e582\out
+cargo:rustc-link-search=native=E:\Development\RUST_DEV\simple-microservice\rust_payment_service\target\debug\build\libz-sys-fa54a3c794f9e582\out\lib
+cargo:include=E:\Development\RUST_DEV\simple-microservice\rust_payment_service\target\debug\build\libz-sys-fa54a3c794f9e582\out/include

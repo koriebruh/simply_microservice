@@ -1,0 +1,8 @@
+Building and linking librdkafka statically
+Running command: "cp -a librdkafka/. /mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/build/rdkafka-sys-758536d79c62e92e/out" in dir: .
+Running command: "/mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/build/rdkafka-sys-758536d79c62e92e/out/configure --disable-ssl --disable-gssapi --disable-curl --disable-zstd --disable-lz4-ext" in dir: /mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/build/rdkafka-sys-758536d79c62e92e/out
+Running command: "make libs" in dir: /mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/build/rdkafka-sys-758536d79c62e92e/out
+make: Warning: File 'Makefile.config' has modification time 0.43 s in the future
+make[1]: Warning: File '../Makefile.config' has modification time 0.39 s in the future
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+make: warning:  Clock skew detected.  Your build may be incomplete.
