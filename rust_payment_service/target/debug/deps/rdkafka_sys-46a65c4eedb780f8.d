@@ -1,0 +1,10 @@
+/mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/deps/librdkafka_sys-46a65c4eedb780f8.rmeta: /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/lib.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/bindings.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/helpers.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/types.rs
+
+/mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/deps/librdkafka_sys-46a65c4eedb780f8.rlib: /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/lib.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/bindings.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/helpers.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/types.rs
+
+/mnt/e/Development/RUST_DEV/simple-microservice/rust_payment_service/target/debug/deps/rdkafka_sys-46a65c4eedb780f8.d: /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/lib.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/bindings.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/helpers.rs /home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/types.rs
+
+/home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/lib.rs:
+/home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/bindings.rs:
+/home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/helpers.rs:
+/home/korie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.8.0+2.3.0/src/types.rs:

@@ -11,7 +11,7 @@ pub fn create() -> StreamConsumer{
     let mut config = ClientConfig::new()
         .set("bootstrap.servers", "localhost:9092")
         .set("auto.offset.reset", "earliest")
-        .set("group.id","inigrup")
+        .set("group.id","payment_status")
         .set("socket.timeout.ms", "4000");
 
     let consumer : StreamConsumer = config.create()
@@ -22,7 +22,7 @@ pub fn create() -> StreamConsumer{
 
 async fn consume(consumer : StreamConsumer){
     consumer.subscribe(
-        &["order_created"]
+        &["test"]
     ).expect("Can't subscribe");
 
     loop {

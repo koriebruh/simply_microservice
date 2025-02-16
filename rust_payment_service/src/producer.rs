@@ -1,7 +1,6 @@
 use std::time::Duration;
 use rdkafka::error::KafkaError::ClientConfig;
 use rdkafka::producer::{FutureProducer, FutureRecord};
-use rdkafka::producer::future_producer::OwnedDeliveryResult;
 use rdkafka::util::Timeout;
 
 pub fn create() -> FutureProducer {
@@ -18,7 +17,7 @@ pub fn create() -> FutureProducer {
 
 
 pub async fn produce(future_producer: FutureProducer, msg: String) {
-    let record = FutureRecord::to("payment_status")
+    let record = FutureRecord::to("test")
         .payload(msg.as_str())
         .key("gtw");
 
